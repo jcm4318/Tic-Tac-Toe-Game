@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS T3</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Title-->
+    <div id="title-div">
+      <h1 data-id="tochange">Tic Tac Toes</h1>
+    </div>
+
+    <div class="rounded" id="container">
+      <!--Status bar-->
+      <div id="status-div">
+        <i
+          class="fa-solid fa-x purple icon-animation"
+          data-id="status-icon"
+        ></i>
+        <p class="text-animation" id="status-text" data-id="status-text">
+          Player 1's turn!
+        </p>
+      </div>
+
+      <!--Dropdown menu-->
+      <div id="menu-div">
+        <button
+          class="rounded shadow-outer menu-btn-closed-color"
+          id="menu-btn"
+          data-id="menu-btn"
+        >
+          Actions
+          <i class="fa-solid fa-chevron-down" data-id="chevron-icon"></i>
+        </button>
+
+        <div
+          class="rounded hidden"
+          id="menu-items-div"
+          data-id="menu-items-div"
+        >
+          <button
+            class="menu-item-btn rounded"
+            id="menu-item-1"
+            data-id="restart-rnd-btn"
+          >
+            Restart Round
+          </button>
+          <button
+            class="menu-item-btn rounded"
+            id="menu-item-2"
+            data-id="new-game-btn"
+          >
+            New Game
+          </button>
+        </div>
+      </div>
+
+      <!--Game Board-->
+      <div class="square shadow-inner rounded" data-id="square" id="1"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="2"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="3"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="4"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="5"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="6"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="7"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="8"></div>
+      <div class="square shadow-inner rounded" data-id="square" id="9"></div>
+
+      <!--Other Buttons-->
+      <div class="scoreboard-div" id="bottom-left-div">
+        <p class="big-text">Player 1:</p>
+        <p class="small-text" data-id="p1-score">0 wins</p>
+      </div>
+
+      <div class="scoreboard-div" id="bottom-middle-div">
+        <p class="big-text">Ties:</p>
+        <p class="small-text" data-id="num-ties">0</p>
+      </div>
+
+      <div class="scoreboard-div" id="bottom-right-div">
+        <p class="big-text">Player 2:</p>
+        <p class="small-text" data-id="p2-score">0 wins</p>
+      </div>
+    </div>
+    <div id="modal-container" class="hidden" data-id="modal-container">
+      <div id="modal" class="rounded shadow-inner">
+        <p>Player 1 wins!</p>
+        <div id="modal-btn-div" class="rounded">
+          <button
+            id="modal-btn"
+            class="rounded menu-item-btn"
+            data-id="modal-btn"
+          >
+            Next round
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
